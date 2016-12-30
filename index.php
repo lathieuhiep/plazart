@@ -1,7 +1,11 @@
 <?php
 get_header();
 get_template_part('template_inc/inc','menu');
-get_template_part('template_inc/inc','breadcrumb');
+global $plazart_options;
+$breadcrumbs = $plazart_options['tz_breadcrumbs_index'];
+if($breadcrumbs == true){
+    get_template_part('template_inc/inc','breadcrumb');
+}
 ?>
 <div class="tz-blog">
     <div class="container">

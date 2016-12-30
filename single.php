@@ -1,10 +1,12 @@
 <?php
-global $plazart_options;
-$tz_plazarttheme_single_sidebar    =   $plazart_options['tz_blog_single_sidebar'];
-var_dump($tz_plazarttheme_single_sidebar);
 get_header();
 get_template_part('template_inc/inc','menu');
-get_template_part('template_inc/inc','breadcrumb');
+global $plazart_options;
+$breadcrumbs = $plazart_options['tz_breadcrumbs_single'];
+if($breadcrumbs == true){
+    get_template_part('template_inc/inc','breadcrumb');
+}
+$tz_plazarttheme_single_sidebar    =   $plazart_options['tz_blog_single_sidebar'];
 ?>
 <div class="tz-blog-single">
     <div class="container">

@@ -989,6 +989,53 @@ Redux::setSection( $opt_name, array(
 
 // -> END Blog Options
 
+// -> START Breadcrumbs Options
+
+Redux::setSection( $opt_name, array(
+    'title'            => esc_html__( 'Breadcrumbs', 'plazart-theme' ),
+    'id'               => 'tz_breadcrumbs',
+    'desc'             => esc_html__( 'Breadcrumbs config', 'plazart-theme' ),
+    'customizer_width' => '400px',
+    'icon'             => 'el el-compass',
+    'fields'     => array(
+
+        array(
+            'id'       => 'tz_breadcrumbs_index',
+            'type'     => 'switch',
+            'title'    => esc_html__( 'Index Breadcrumbs', 'plazart-theme' ),
+            'subtitle' => esc_html__( 'Index Breadcrumbs On/Off', 'plazart-theme' ),
+            'default'  => false,
+        ),
+
+        array(
+            'id'       => 'tz_breadcrumbs_archive',
+            'type'     => 'switch',
+            'title'    => esc_html__( 'Archive Breadcrumbs', 'plazart-theme' ),
+            'subtitle' => esc_html__( 'Archive Breadcrumbs On/Off', 'plazart-theme' ),
+            'default'  => false,
+        ),
+
+        array(
+            'id'       => 'tz_breadcrumbs_single',
+            'type'     => 'switch',
+            'title'    => esc_html__( 'Single Breadcrumbs', 'plazart-theme' ),
+            'subtitle' => esc_html__( 'Single Breadcrumbs On/Off', 'plazart-theme' ),
+            'default'  => false,
+        ),
+
+        array(
+            'id'       => 'tz_breadcrumbs_search',
+            'type'     => 'switch',
+            'title'    => esc_html__( 'Search Breadcrumbs', 'plazart-theme' ),
+            'subtitle' => esc_html__( 'Search Breadcrumbs On/Off', 'plazart-theme' ),
+            'default'  => false,
+        ),
+
+    )
+));
+
+// -> END Breadcrumbs Options
+
 // -> START 404 Options
 
     Redux::setSection( $opt_name, array(

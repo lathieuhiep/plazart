@@ -37,14 +37,15 @@
         $sitewidth = '100%';
         }
         $custom_css =
+
             "
                 $css
                 .container{
                     width: $sitewidth !important;
                 }
 
-
             ";
+
         wp_add_inline_style( 'custom-style', $custom_css );
     }
 add_action( 'wp_enqueue_scripts', 'plazart_theme_method' );

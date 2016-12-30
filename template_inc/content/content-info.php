@@ -1,19 +1,20 @@
 <?php
 global $plazartoptions;
-$$tz_plazart_single_title = $plazartoptions['tz_blog_single_title'];
-$$tz_plazart_single_title = $plazartoptions['tz_blog_single_title'];
-$tz_plazart_post_type = get_post_type( $post -> ID );
-$tz_plazart_comment_count  = wp_count_comments($post->ID);
-$tz_plazart_view = tzPlazart_getPostViews($post->ID);
+$tz_plazart_single_title   =    $plazart_options['tz_blog_single_title'];
+$tz_plazart_blog_title     =    $plazart_options['tz_blog_general_title'];
+$tz_plazart_post_type      =    get_post_type( $post -> ID );
+$tz_plazart_comment_count  =    wp_count_comments($post->ID);
+$tz_plazart_view           =    tzPlazart_getPostViews($post->ID);
 ?>
 <div class="tz-blog-content">
+
     <h3 class="tz-blog-title">
         <?php
-        if(is_single()){
+        if(is_single() && $tz_plazart_single_title == 0){
             ?>
             <?php the_title();?>
             <?php
-        }else{
+        }elseif( $tz_plazart_blog_title == 0 ){
             ?>
             <a href="<?php the_permalink();?>"><?php the_title();?></a>
             <?php
@@ -26,7 +27,8 @@ $tz_plazart_view = tzPlazart_getPostViews($post->ID);
             <?php echo esc_html__('Author:','plazart-theme');?>
             <a href="<?php echo get_author_posts_url(get_the_author_meta('ID'));?>"><?php the_author();?></a>
         </span>
-        <?php $tz_plazart_year = get_the_time( 'Y' );
+        <?php
+        $tz_plazart_year = get_the_time( 'Y' );
         $tz_plazart_month = get_the_time( 'm' );
         $tz_plazart_day = get_the_time( 'd' ); ?>
         <span>

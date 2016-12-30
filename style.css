@@ -1180,6 +1180,23 @@ p {
   margin: 0;
   padding-left: 80px;
 }
+#tzloadding{
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(255,255,255,0.99);
+  z-index: 99999999;
+  width: 100%;
+  height: 100%;
+}
+#tzloadding img{
+  position: absolute;
+  left: 45%;
+  top: 40%;
+  margin-top: -35px;
+  margin-left: -35px;
+  max-width: 200px;
+}
 /**
  * 8.0 Sidebar
  * -----------------------------------------------------------------------------
