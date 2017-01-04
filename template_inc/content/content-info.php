@@ -1,5 +1,5 @@
 <?php
-global $plazartoptions;
+global $plazart_options;
 $tz_plazart_single_title   =    $plazart_options['tz_blog_single_title'];
 $tz_plazart_blog_title     =    $plazart_options['tz_blog_general_title'];
 $tz_plazart_post_type      =    get_post_type( $post -> ID );
